@@ -40,11 +40,11 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
+    gap: 15px;
     align-items: center;
     justify-content: center;
     padding: 10px 0;
-
+    text-transform: uppercase;
 }
 
 header.hidden{
@@ -58,26 +58,59 @@ header.hidden{
     filter: brightness(0) invert(1);
 }
 
+.logo-text {
+    font-size: 20px;
+    color: #f4f4f4; 
+    text-transform: none;
+    pointer-events: none;
+    border-left: 2px solid #f4f4f4;
+    padding-left: 18px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
 nav ul {
     list-style: none;
     display: flex;
 }
 
 nav li {
-    margin-left: 1.5rem;
+    margin-left: 3rem;
+    position: relative;
 }
 
-nav a {
+#menu a {
     color: #f4f4f4;
     font-weight: 500;
+    text-decoration: none;
+    padding-bottom: 5px;
+    position: relative;
 }
 
-nav a:hover {
-    color: #CFAF63;
+#menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #CFAF63;
+    transition: width 0.3s ease;
+
+}
+
+#menu a:hover {
+    /* color: #CFAF63; */
+}
+
+#menu a:hover::after {
+    width: 100%;
 }
 
 .call-now {
-    margin-left: 12px;
+    /* margin-left: 12px; */
     padding:10px 16px;
     border-radius:999px;
     background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
@@ -85,6 +118,7 @@ nav a:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,.35);
     border: 1px solid rgba(255,255,255,.08);
 }
+
 .call-now:hover {
     transform:translateY(-1px);
     color: #f4f4f4;
@@ -113,7 +147,7 @@ nav a:hover {
 
 .hero .button {
     background: #CFAF63;
-    border: 1px solid #CFAF63;
+    border: 2px solid #CFAF63;
     padding: 1rem 2rem;
     color: #f4f4f4;
     font-weight: bold;
@@ -123,16 +157,24 @@ nav a:hover {
 }
 
 .button.secondary {
-    border: 2px solid rgba(255,255,255,.08);
+    border: 2px solid #f4f4f4;
     cursor: pointer;
     background: transparent;
     transition: .5s ease;
 }
 
+.hero .button.secondary:hover {
+    color: #f4f4f4;
+    border: 2px solid #CFAF63;
+    background: #CFAF63;
+
+}
 
 .hero .button:hover {
-    background: #b08a4f;
+    background: transparent;
     transition: .5s ease;
+    color: #f4f4f4;
+    border: 2px solid #f4f4f4;
 }
 
 /* layout  */
@@ -176,26 +218,20 @@ section {
 .about .card {
     background:rgba(28,28,40,0.9);
     border:1px solid rgba(255,255,255,.08);
-    border-radius: 18px;
-    overflow:hidden;
+    /* border-radius: 18px; */
+    overflow: hidden;
     box-shadow:0 10px 30px rgba(0,0,0,.35);
     gap: 28px;
-    padding: 1rem;
 }
 
 .about img {
-    width: 100%;
-    height: auto;
-    border-radius: 18px;
-    padding: 1rem;
-    background:rgba(28,28,40,0.9);
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
-    overflow:hidden;
-    border:1px solid rgba(255,255,255,.08);
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
 }
 
 .about .card-body {
-    padding: 22px;
+    padding: 12px;
     color: #f4f4f4;
 }
 
@@ -218,7 +254,7 @@ section {
     background:rgba(28,28,40,0.9);
     border:1px solid rgba(255,255,255,.08);
     padding: 2rem;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s;
     cursor: pointer;
@@ -242,7 +278,7 @@ section {
 .listings {
     background:linear-gradient(180deg,rgba(124,196,255,.12),rgba(255,255,255,.02));
     border: 1px solid rgba(255,255,255,.08);
-    border-radius: 18px;
+    /* border-radius: 18px; */
     padding:20px;
     
 }
@@ -269,7 +305,7 @@ label {
 select,input {
     width: 100%;
     padding: 12px 12px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     border: 1px solid rgba(255,255,255,.08);
     background:#0c121a;
     color:#eef2f7;
@@ -279,7 +315,7 @@ select,input {
 .search-button {
     background: #CFAF63;
     padding: 12px 24px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     color: #f4f4f4;
     font-weight: bold;
     border: 1px solid rgba(255,255,255,.08);
@@ -298,13 +334,13 @@ select,input {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 8px;
+    gap: 28px;
 }
 
 .gallery img {
     width: 100%;
     height: 180px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     transition: transform 0.3s;
     cursor: pointer;
     object-fit: cover;
@@ -313,7 +349,7 @@ select,input {
 
 .gallery a {
     position: relative;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     overflow: hidden;
     border: 1px solid rgba(255,255,255,.08);
 }
@@ -365,7 +401,7 @@ select,input {
 
 .lightbox img{
     max-height: 88vh;
-    border-radius: 14px;
+    /* border-radius: 14px; */
     border:1px solid rgba(255,255,255,.08);
 }
 
@@ -382,7 +418,7 @@ select,input {
 .card { 
     background:rgba(28,28,40,0.9);
     border:1px solid rgba(255,255,255,.08);
-    border-radius: 18px;
+    /* border-radius: 18px; */
     overflow:hidden;
     box-shadow:0 10px 30px rgba(0,0,0,.35);
     padding: 20px;

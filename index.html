@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/webp" href="css/images/logo.webp">
     <title>Marci Metzger Homes - Real Estate</title>
 </head>
 <body>
@@ -14,7 +15,10 @@
             <!-- <span class="menu-toggle">☰</span> -->
             <a href="#home" class="logo">
                 <img src="css/images/logo.webp">
-            </a> 
+            </a>
+            <a href="#home" class="logo-text">
+                <p>The Ridge Reality Group </p>
+            </a>
             <ul id="menu">
                 <li><a href="#home">Home</li>
                 <li><a href="#about">About</li>
@@ -27,7 +31,7 @@
     </header>
     <section id="home" class="hero">
         <div>
-        <p>MARCI METZGER • THE RIDGE REALITY GROUP</p>
+        <p>MARCI METZGER | THE RIDGE REALITY GROUP</p>
         <h1>PAHRUMP REALTOR</h1>
         <a href="" class="button">📞 Call Now</a>
         <a href="#listings" class="button secondary">View Listings</a>   
@@ -35,7 +39,9 @@
     </section>
     <section id="about">
         <div class="container about">
-            <img src="images/marci.webp"/>
+            <div class="card">
+                <img src="images/marci.jpg"/>
+            </div>
         <div class="card">
             <div class="card-body">
             <h3 class="header-title" style="text-align: left;">MARCI METZGER</h3>
@@ -191,7 +197,7 @@
                             <label for="name">NAME</label>
                             <input type="text" placeholder="Name" required>
                             <label for="email">EMAIL*</label>
-                            <input type="email" placeholder="example@" required>
+                            <input type="email" placeholder="example@email.com" required>
                             <textarea placeholder="Type your message..." required></textarea>
                             <button class="search-button" type="submit">Send Message</button>
                         </form>

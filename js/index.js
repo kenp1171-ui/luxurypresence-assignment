@@ -35,7 +35,7 @@ function showNavbar() {
 
 function resetTimer() {
     clearTimeout(hideTimeout);
-    hideTimeout = setTimeout(hideNavbar, 1000);
+    hideTimeout = setTimeout(hideNavbar, 500    );
 }
 
 window.addEventListener("scroll", showNavbar);
