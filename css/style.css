@@ -433,7 +433,15 @@ footer .sm-icons a {
     .logo-strip img {
         max-height: 60px;
     }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+    
     nav ul{
+        display: none;
+    }
+    nav a {
         display: none;
     }
 }
