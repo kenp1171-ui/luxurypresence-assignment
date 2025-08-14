@@ -210,10 +210,10 @@ section {
 
 .listings {
     background:linear-gradient(180deg,rgba(124,196,255,.12),rgba(255,255,255,.02));
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255,255,255,.08);
     border-radius: 18px;
     padding:20px;
-
+    
 }
 
 .grid-3 {
@@ -242,6 +242,7 @@ select,input {
     border: 1px solid rgba(255,255,255,.08);
     background:#0c121a;
     color:#eef2f7;
+    height: auto;
 }
     
 .search-button {
@@ -418,6 +419,11 @@ footer .sm-icons a {
         grid-template-columns: 1fr;
     }
 
+    .about img {
+        width: 100%;
+        height: auto;
+    }
+
     .listings .grid-3 {
         grid-template-columns: 1fr;
     }
@@ -437,7 +443,7 @@ footer .sm-icons a {
     .contact {
         grid-template-columns: 1fr;
     }
-    
+
     nav ul{
         display: none;
     }
