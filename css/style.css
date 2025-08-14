@@ -127,6 +127,7 @@ nav a:hover {
     border: 2px solid rgba(255,255,255,.08);
     cursor: pointer;
     background: transparent;
+    transition: .5s ease;
 }
 
 
