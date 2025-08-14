@@ -63,7 +63,7 @@ nav a:hover {
     color: #CFAF63;
 }
 
-.call-now{
+.call-now {
     margin-left: 12px;
     padding:10px 16px;
     border-radius:999px;
@@ -73,7 +73,8 @@ nav a:hover {
     border: 1px solid rgba(255,255,255,.08);
 }
 .call-now:hover {
-    transform:translateY(-1px)
+    transform:translateY(-1px);
+    color: #f4f4f4;
 }
 
 /* hero */
@@ -101,8 +102,13 @@ nav a:hover {
     background: #CFAF63;
     padding: 1rem 2rem;
     border-radius: 40px;
-    color: white;
+    color: #f4f4f4;
     font-weight: bold;
+}
+
+.hero .button:hover {
+    background: #b08a4f;
+    transition: .5s ease;
 }
 
 /* sections */
@@ -204,6 +210,7 @@ section {
 
 .feature:hover {
     transform: translateY(-5px);
+    transition: .5s;
 }
 
 /* listings */
@@ -259,6 +266,7 @@ select,input {
 
 .search-button:hover {
     background: #b08a4f;
+    transition: .5s ease;
 }
 
 /* gallery */
