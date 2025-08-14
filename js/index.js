@@ -17,40 +17,49 @@ const lb = document.createElement('div');
 
 // hide n show nav
 
-// const navbar = document.getElementById("navbar");
-// let hideTimeout;
+const navbar = document.getElementById("navbar");
+const homeSection = document.getElementById("home");
+let onHome = false;
+let hideTimeout;
 
-// function hideNavbar() {
-//     navbar.classList.add("hidden");
-// }
+function hideNavbar() {
+    if(!onHome){
+    navbar.classList.add("hidden");
+    }
+}
 
-// function showNavbar() {
-//     navbar.classList.remove("hidden");
-//     restartHideTimer();
-// }
+function showNavbar() {
+    navbar.classList.remove("hidden");
+    if(!onHome) resetTimer();
+}
 
-// function restartHideTimer() {
-//     clearTimeout(hideTimeout);
-//     hideTimeout = setTimeout(hideNavbar, 1000);
-// }
+function resetTimer() {
+    clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(hideNavbar, 1000);
+}
 
-// function checkAboutSection() {
-//     const aboutTop = document.queryBoundingClientRec().top;
+window.addEventListener("scroll", showNavbar);
+window.addEventListener("mousemove", showNavbar);
 
-//     if (aboutTop <= 0) {
-//         restartHideTimer();
-//     } else {
-//         clearTimeout(hideTimeout);
-//     }
-// }
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.target.id === "home") {
+            onHome =  entry.isIntersecting;
+            if (onHome) {
+                clearTimeout(hideTimeout);
+                // navbar.classList.remove("hidden");
+                showNavbar();
 
-// document.addEventListener("scroll", () => {
-//     if (window.scrollY > 100) {
-//         showNavbar();
-//     }
-// });
-// window.addEventListener("scroll", checkAboutSection);
-// checkAboutSection();
+            } else {
+                resetTimer();
+            }
+        }
+    });
+}, {threshold: 0.5});
+
+observer.observe(homeSection);
+
+resetTimer();   
 
 
 // toggle menu
