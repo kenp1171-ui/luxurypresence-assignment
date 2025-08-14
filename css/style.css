@@ -322,7 +322,7 @@ select,input {
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: white;
     background: rgba(0, 0, 0, 0.4);
     opacity: 0;
@@ -336,6 +336,13 @@ select,input {
 
 .gallery a:hover img {
     transform:scale(1.05);
+}
+
+
+.gallery a.view-more::after {
+    content: "View More";
+    position: absolute;
+    opacity: 1;
 }
 
 .lightbox {
@@ -355,6 +362,8 @@ select,input {
     border-radius: 14px;
     border:1px solid rgba(255,255,255,.08);
 }
+
+
 
 /* contact */
 
