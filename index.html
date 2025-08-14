@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link javascript="text/javascript" src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Marci Metzger Homes - Real Estate</title>
@@ -213,21 +214,5 @@
                 <p>All rights reserved.</p>
             </div>
         </footer>
-        <script>
-            const lb = document.createElement('div');
-            lb.className = 'lightbox';
-            lb.innerHTML = '<img alt="Expanded" />';
-            lb.addEventListener('click', ()=> lb.classList.remove('open'));
-            document.body.appendChild(lb);
-            const lbImg = lb.querySelector('img');
-
-            document.querySelectorAll('.gallery a').forEach(a=>{
-            a.addEventListener('click', e=>{
-                e.preventDefault();
-                lbImg.src = a.getAttribute('href');
-                lb.classList.add('open');
-            })
-            })
-        </script>
 </body>
 </html>
