@@ -113,15 +113,18 @@ nav a:hover {
 
 .hero .button {
     background: #CFAF63;
+    border: 1px solid #CFAF63;
     padding: 1rem 2rem;
     border-radius: 20px;
     color: #f4f4f4;
-    /* font-weight: bold; */
+    font-weight: bold;
     margin-left: 1rem;
+    width: 100px;
+
 }
 
 .button.secondary {
-    border: 2px solid #f4f4f4;
+    border: 2px solid rgba(255,255,255,.08);
     cursor: pointer;
     background: transparent;
 }
@@ -337,7 +340,10 @@ select,input {
 .gallery a:hover img {
     transform:scale(1.05);
 }
-
+.gallery a.view-more::before{
+    pointer-events: none;
+    cursor: not-allowed;
+}
 
 .gallery a.view-more::after {
     content: "View More";
