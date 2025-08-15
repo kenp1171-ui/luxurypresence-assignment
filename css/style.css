@@ -68,7 +68,6 @@ header.hidden {
     width: auto;
     display: block;
     filter: brightness(0) invert(1);
-    
 }
 
 .logo-text {
@@ -265,6 +264,7 @@ section {
     align-items: center;
     gap: 2rem;
     margin-bottom: 3rem;
+
 }
 
 .feature-row.reverse {
@@ -653,6 +653,7 @@ footer .sm-icons a:hover {
     .hero p {
         font-size: 1.2rem;
     }
+
     .logo-strip{
         gap: 4rem;
         flex-wrap: wrap;
@@ -675,6 +676,7 @@ footer .sm-icons a:hover {
         align-items: center;
         position: relative;
     }
+
     .call-now, .logo-text {
         display: none;
     }
@@ -736,17 +738,19 @@ footer .sm-icons a:hover {
 
     .features,.services,.gallery,.contact,.about{
         grid-template-columns: 1fr;
+        padding: 2rem;
     }
 
     .feature-row{
         grid-template-columns: 1fr;
+        padding: 2rem;
     }
 
     .feature-row.reverse{
         direction: ltr;
     }
 
-    .logo-strip{
+    .logo-strip {
         flex-direction: column;
         gap: 2rem;
         height: auto;
