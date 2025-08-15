@@ -422,6 +422,14 @@ select, input {
 
 /* gallery */
 
+
+#gallery {
+    /* border: 1px solid red; */
+    background-color: rgba(15, 15, 20, 0.95);
+}
+#gallery .header-title {
+    color: #ffffff;
+}
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -440,7 +448,7 @@ select, input {
 .gallery a {
     position: relative;
     overflow: hidden;
-    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .gallery a::after {
