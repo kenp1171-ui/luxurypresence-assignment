@@ -660,6 +660,7 @@ footer .sm-icons a:hover {
 .logo-strip{
     gap: 4rem;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 }
@@ -804,7 +805,7 @@ nav ul {
 /* .gallery img{
     height: 140px;
 } */
-.logo-strip{
+.logo-strip img{
     max-height: 60px;
 }
 }
