@@ -129,6 +129,7 @@ nav li {
     color: #ffffff;
     padding: 0 1rem;
     background-attachment: fixed;
+    gap: 1rem;
 }
 
 .hero h1 {
@@ -152,7 +153,7 @@ nav li {
 }
 
 .button.secondary {
-    border: 2px solid #333;
+    border: 2px solid #ffffff;
     cursor: pointer;
     background: transparent;
     transition: .5s ease;
@@ -166,8 +167,22 @@ nav li {
 
 .hero .button:hover {
     background: transparent;
-    color: #333;
-    border: 2px solid #333;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.hero-buttons .button {
+    width: 160px;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 /* layout */
