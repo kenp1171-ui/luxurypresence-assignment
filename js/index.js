@@ -51,3 +51,11 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 observer.observe(homeSection);
+
+// toggle menu
+
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+});
