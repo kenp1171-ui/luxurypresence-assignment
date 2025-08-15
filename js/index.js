@@ -41,6 +41,15 @@ function resetTimer() {
 window.addEventListener("scroll", showNavbar);
 window.addEventListener("mousemove", showNavbar);
 
+window.addEventListener('scroll', function () {
+const nav = document.querySelector('header');
+if (window.scrollY > 10) {
+    nav.classList.add('scrolled');
+} else {
+    nav.classList.remove('scrolled');
+}
+});
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.target.id === "home") {
