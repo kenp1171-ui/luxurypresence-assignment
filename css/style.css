@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
 *, html {
     margin: 0;
     padding: 0;
@@ -6,7 +8,8 @@
 }
 
 body {
-    font-family: Poppins, sans-serif;
+    font-family: 'Cormorant Garamond', serif;
+    /* font-family: 'Coldiac', serif; */
     line-height: 1.6;
     background-color: #f5f7fa;
     color: #333;
@@ -69,7 +72,7 @@ header.hidden {
 }
 
 .logo-text {
-    font-size: 20px;
+    font-size: 22px;
     color: #ffffff;
     text-transform: none;
     pointer-events: none;
@@ -149,7 +152,7 @@ nav li {
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .hero .button {
@@ -192,7 +195,7 @@ nav li {
 .hero-buttons .button {
     width: 160px;
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -210,7 +213,7 @@ section {
 .header-title {
     text-align: center;
     margin: 0 0 40px;
-    font-size: 30px;
+    font-size: 34px;
     color: #333;
     text-transform: uppercase;
 
@@ -219,7 +222,7 @@ section {
 .subheader-title {
     color: #666;
     margin: 0 0 .5rem;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* about */
@@ -247,6 +250,7 @@ section {
 .about .card-body {
     padding: 12px;
     color: #333;
+    font-size: 1.2rem;
 }
 
 .card-body p {
@@ -286,12 +290,13 @@ section {
 
 .feature-text h3 {
     margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .feature-text p {
     color: #555;
     line-height: 1.6;
+    font-size: 1.2rem;
 }
 
 
@@ -382,6 +387,7 @@ select, input {
     background: #fff;
     color: #333;
     height: auto;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .search-button {
@@ -393,6 +399,7 @@ select, input {
     cursor: pointer;
     width: 100%;
     margin-top: 1rem;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .search-button:hover {
@@ -430,7 +437,7 @@ select, input {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     background: rgba(0, 0, 0, 0.4);
     opacity: 0;
@@ -544,10 +551,12 @@ select, input {
 
 /* contact */
 
+
 .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 22px;
+
 }
 
 .card {
@@ -612,10 +621,17 @@ footer .sm-icons a:hover {
     background: #eaeef3;
     height: 20vh;
     margin-top: 3rem;
+    
+}
+
+.logo-strip.dark {
+    background: rgba(15, 15, 20, 0.9);
 }
 
 .logo-strip a {
     font-size: 2.5rem;
+    filter: brightness(0) invert(1);
+
 }
 
 .logo-strip img {
