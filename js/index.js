@@ -17,59 +17,37 @@ const lb = document.createElement('div');
 
 // hide n show nav
 
-const navbar = document.getElementById("navbar");
+const header = document.querySelector("header");
 const homeSection = document.getElementById("home");
-let onHome = false;
-let hideTimeout;
+let lastScrollY = window.scrollY;
+let onHome = true;
 
-function hideNavbar() {
-    if(!onHome){
-    navbar.classList.add("hidden");
+window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > 10) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
     }
-}
 
-function showNavbar() {
-    navbar.classList.remove("hidden");
-    if(!onHome) resetTimer();
-}
+    if (currentScrollY < lastScrollY) {
+        header.classList.remove("hidden");
+    } else if (currentScrollY > lastScrollY && !onHome) {
+        header.classList.add("hidden");
+    }
 
-function resetTimer() {
-    clearTimeout(hideTimeout);
-    hideTimeout = setTimeout(hideNavbar, 500    );
-}
-
-window.addEventListener("scroll", showNavbar);
-window.addEventListener("mousemove", showNavbar);
-
-window.addEventListener('scroll', function () {
-const nav = document.querySelector('header');
-if (window.scrollY > 10) {
-    nav.classList.add('scrolled');
-} else {
-    nav.classList.remove('scrolled');
-}
+    lastScrollY = currentScrollY;
 });
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.target.id === "home") {
-            onHome =  entry.isIntersecting;
+            onHome = entry.isIntersecting;
             if (onHome) {
-                clearTimeout(hideTimeout);
-                // navbar.classList.remove("hidden");
-                showNavbar();
-
-            } else {
-                resetTimer();
+                header.classList.remove("hidden");
             }
         }
     });
-}, {threshold: 0.5});
+}, { threshold: 0.5 });
 
 observer.observe(homeSection);
-
-resetTimer();   
-
-
-// toggle menu
-

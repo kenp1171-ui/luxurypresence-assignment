@@ -34,9 +34,9 @@ header {
     width: 100%;
     z-index: 1000;
     /* border-bottom: 1px solid #ddd; */
-    transition: top 0.5s ease;
     background: transparent;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: top 0.5s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 nav {
@@ -57,7 +57,7 @@ header.scrolled {
 }
 
 header.hidden {
-    top: -200px;
+    top: -120px;
 }
 
 .logo img {
