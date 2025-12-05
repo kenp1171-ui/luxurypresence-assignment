@@ -1,0 +1,243 @@
+/* GLOBAL STYLES & TYPOGRAPHY */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: #0d1a26; /* Deep Charcoal/Navy */
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2rem; }
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Primary Accent Blue */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* HEADER & HERO SECTION */
+.hero-section {
+    background: url('hero-background-image.jpg') center/cover no-repeat;
+    /* Use a high-quality, professional image for the background */
+    color: #fff;
+    padding: 40px 0 100px;
+    position: relative;
+    /* Dark overlay for text readability */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); 
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-bar li a {
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: 600;
+    display: block;
+}
+
+.contact-header {
+    font-weight: 600;
+    color: #ff9900; /* Secondary Accent/CTA Color */
+}
+
+/* Hero Content */
+.hero-content {
+    max-width: 900px;
+    margin: 100px auto 0;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.agent-headshot {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ff9900; 
+    margin-top: 20px;
+}
+
+/* Search Bar (Primary CTA) */
+.cta-search-bar {
+    display: flex;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cta-search-bar input {
+    flex-grow: 1;
+    padding: 15px;
+    border: none;
+    font-size: 1rem;
+}
+
+.cta-search-bar button {
+    background-color: #ff9900; /* Prominent CTA Color */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.cta-search-bar button:hover {
+    background-color: #e68a00;
+}
+
+/* SECTIONS & CARDS */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-prop {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* Buyer/Seller Path Cards */
+.path-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.card h3 {
+    color: #007bff;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    background-color: #e6e6e6; /* Light gray background to distinguish section */
+}
+
+.testimonial-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.testimonial-item p:first-child {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
+}
+
+/* FOOTER */
+footer {
+    background-color: #0d1a26;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    margin-top: 10px;
+    /* Placeholder for social icon styling */
+}
+
+/* Mobile Responsiveness (Basic) */
+@media (max-width: 768px) {
+    .nav-bar nav {
+        display: none; /* Hide standard navigation on small screens, would use a hamburger menu */
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .nav-bar {
+        padding: 0 10px;
+    }
+    .cta-search-bar {
+        flex-direction: column;
+    }
+    .cta-search-bar button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
