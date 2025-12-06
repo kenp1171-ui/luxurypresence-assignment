@@ -59,3 +59,42 @@ const menu = document.getElementById('menu');
     menuToggle.addEventListener('click', () => {
     menu.classList.toggle('show');
 });
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slider .slide');
+const dotsContainer = document.querySelector('.slider-dots');
+
+slides.forEach((_, index) => {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    dot.dataset.index = index;
+    if (index === 0) dot.classList.add("active");
+    dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dot");
+dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+        goToSlide(parseInt(dot.dataset.index));
+    });
+});
+
+function goToSlide(index) {
+    slides[currentSlide].classList.remove("active");
+    dots[currentSlide].classList.remove("active");
+
+    currentSlide = index;
+
+    slides[currentSlide].classList.add("active");
+    dots[currentSlide].classList.add("active");
+}
+
+document.getElementById('next').onclick = () => changeSlide(1);
+document.getElementById('prev').onclick = () => changeSlide(-1);
+
+function changeSlide(direction) {
+    let nextIndex = (currentSlide + direction + slides.length) % slides.length;
+    goToSlide(nextIndex);
+}
+
+
