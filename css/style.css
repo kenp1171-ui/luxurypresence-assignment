@@ -748,6 +748,11 @@ select, input {
 }
 
 
+.service:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px var(--black-overlay-light);
+}
+
 /* contact */
 
 
